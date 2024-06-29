@@ -3,10 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/Mayieshop-Site/style.css">
     <title>mayie-shop.netlify.site</title>
 </head>
 <body>
-    
+    <header>
+        <div class="navbar">
+                <img src="/Mayieshop-Site/images/Logo.png" alt="logo" class="logo">
+            <ul class="navbar-links">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Our Work</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Careers</a></li>
+            </ul>
+            <a href="" class="action-btn"><button>Get in touch</button></a>
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+            </div>
+        </div>
+        <div id="menuList" class="dropdown_menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Our Work</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Careers</a></li>
+            <li><a href="" class="action-btns">Get in touch</a></li>
+        </div>
+        
+        <script>
+            let menuList = document.getElementById("menuList")
+            menuList.style.maxHeight = "0px";
+
+            function toggleMenu() {
+                if (menuList.style.maxHeight == "0px") {
+                    menuList.style.maxHeight = "300px";
+                }
+                else {
+                    menuList.style.maxHeight = "0px";
+                }
+            }
+
+        </script>
+        <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+    </header>
 </body>
 </html>
