@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: 1px solid red;
 }
 
 html,
@@ -113,9 +114,11 @@ a button {
     background: #260620;
     backdrop-filter: blur(15px);
     transition: 0.5s;
-    overflow: hidden;
+    overflow-x: hidden;
 }
-
+#menulist .dropdown_menu{
+    overflow-x: hidden;
+}
 .dropdown_menu li{
     padding: 0.7rem;
     display: flex;
@@ -162,14 +165,33 @@ a button {
     height: 520px;
 }
 
+.image-container {
+    background-color: transparent;
+    width: 100%;
+    max-width: 300px;
+    height: 435px;
+    box-shadow: 0px 0px 5px 0px;
+    z-index: 50;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    transform: translateX(-50%);
+}
+
+.image-container img {
+    width: 280px;
+    height: 435px;
+}
 .cont-1-desc {
-    width: 500px;
+    max-width: 600px;
+    width: 470px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 30px;
     margin-inline: auto;
     margin-top: 60px;
+    /* overflow-x: hidden; */
 }
 
 
@@ -185,7 +207,7 @@ a button {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 400;
     font-size: 20px;
-    width: 500px;
+    width: 470px;
     color: #f7f7f7;
 }
 
@@ -204,21 +226,7 @@ a button {
     height: 30px;
 }
 
-.image-container {
-    background-color: transparent;
-    width: 300px;
-    height: 435px;
-    box-shadow: 0px 0px 5px 0px;
-    z-index: 50;
-    position: absolute;
-    top: 45px;
-    right: 190px;
-}
 
-.image-container img {
-    width: 280px;
-    height: 435px;
-}
 
 /* ****************section two********************** */
 .section-two {
@@ -358,18 +366,17 @@ a button {
     color: #f7f7f7;
     font-size: 14px;
 }
+
+/* ************section-four********************** */
+
 /* *****************media query********************* */
 @media(max-width:1029px) {
-    /* section one */
 
 .cont-1-desc {
-        width: 300px;
+        /* width: 300px; */
     }
 .cont-1-desc p{
-        width: 380px;
-    }
-    .image-container {
-        right: 80px;
+        width: 320px;
     }
     .cont-1-desc p {
         font-size: 18px;
@@ -394,30 +401,21 @@ a button {
     width: 320px;
     margin-left: 50px;
     padding-top: 50px;
-    /* border: 1px solid yellow; */
 }
 }
 
 @media(max-width:1022px) {
-    /* section one */
+
 .logo2 {
         display: none;
     }
-.cont-1-desc {
-        width: 300px;
-        display: flex;
-        /* flex-wrap: wrap; */
-    }
+
 .cont-1-desc p{
         width: 320px;
-        /* font-size: 18px; */
+        font-size: 18px;
     }
 .cont-1-desc h1{
-        /* font-size: 50px; */
-    }
-
-    .image-container {
-        right: 80px;
+        font-size: 50px;
     }
 
 /* **************section two****************** */
@@ -426,9 +424,15 @@ a button {
     gap: 15px;
     width: 300px;
 }
+/* **********chapter three********* */
 
+.section-3-cont-2-desc {
+    width: 280px;
+}
 
 }
+
+
 @media(max-width:800px){
     .navbar .navbar-links, .navbar .action-btn{
         display: none;
@@ -439,20 +443,14 @@ a button {
     z-index: 1000;
 }
 .dropdown_menu {
-    display: block;}
+    display: block;
+    overflow-x: hidden;
+}
 
 /* *************section*one*************** */
 .logo2 {
     display: none;
 }
-
-.cont-1-desc {
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 80px;
-}
-
 .cont-1-desc h1 {
     width: 300px;
     margin: 0px;
@@ -488,7 +486,6 @@ a button {
     display: flex;
     justify-content: center;
     margin: 0px;
-    /* margin-left: 80px; */
     gap: 60px;
 }
 
@@ -496,10 +493,12 @@ a button {
     width: 230px;
     padding-top: 30px;
 }
+/* ************section-four********************** */
 
 }
 
-@media (max-width:550px) {
+
+@media (max-width:701px) {
 
     /* *************section*one*************** */
     .section-one {
@@ -533,7 +532,7 @@ a button {
         margin-inline: auto;
     }
     .cont-1-desc p {
-        width: 380px;
+        width: 320px;
         margin-inline: auto;
         font-size: 20px;
     }
@@ -546,7 +545,8 @@ a button {
     }
     .image-container {
         top: -100px;
-        right: 62px;
+        left: 50%;
+        transform: translateX(-50%, -100%);
     }
 
 /* ****************section two********************** */
@@ -599,6 +599,9 @@ a button {
     font-size: 14px;
     padding-top: 30px;
 }
+
+/* ************section-four********************** */
+
 }
 
 @media (max-width:400px) {
@@ -607,7 +610,9 @@ a button {
 header{
     max-width: 400px;
 }
-
+.cont-1-desc {
+    width: 375px;
+}
 .section-one {
         padding-top: 50px;
     }
@@ -623,19 +628,17 @@ header{
     width: 100%;
     height: 401px;
     margin-top: 15px;
-    overflow-x: hidden;
 }
 
 .section-1-cont-2 {
     width: 100%;
     height: 425px;
-    /* overflow-x: hidden; */
 }
 
-.image-container {
+/* .image-container {
     top: -100px;
     right: 35px;
-}
+} */
     
 /* ************section-three********************** */
 .section-3-cont-2-desc {
@@ -643,20 +646,54 @@ header{
     width: 340px;
     padding-left: 15px;
 }
+/* ************section-four********************** */
+
+
 }
 @media (max-width:390px) {
-.image-container {
-    top: -80px;
-    right: 45px;
+
+.cont-1-desc {
+    width: 330px;
 }
+.cont-1-desc p{
+    width: 330px;
 }
+/* section two */
+.section-2-cont-1-desc{
+    width: 300px;
+}
+/* section three */
+.section-3-cont-2-desc{
+    width: 300px;
+}
+
+.girly-image1{
+    margin-left: -20px;
+}
+.girly-image2 {
+    top: 280px;
+    left: 100px;
+}
+
+.section-3-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 65px;
+}
+/* ************section-four********************** */
+
+}
+
 @media (max-width:320px) {
 
     .header {
-        max-width: 320px;
+        /* max-width: 320px; */
     }
 
     /* *************section*one*************** */
+        .cont-1-desc{
+            width: 320px;
+        }
     .cont-1-desc h1 {
         width: 300px;
         margin-left: 10px;
@@ -671,10 +708,10 @@ header{
         margin-left: 15%;
     }
 
-.image-container {
+/* .image-container {
     top: -80px;
     right: 10px;
-}
+} */
 
 /* ****************section two********************** */
 
@@ -707,4 +744,8 @@ header{
     top: 280px;
     left: 100px;
 }
+
+/* ************section-four********************** */
+
+
 }
