@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 
 html,
@@ -334,7 +334,7 @@ a button {
     width: 90%;
     margin-inline: auto;
     padding-top: 100px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .section-3-cont-2-desc {
@@ -1057,7 +1057,7 @@ header{}
 .section-3-container {
     width: 80%;
     margin-inline: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .girly-image2 {
     top: 280px;
