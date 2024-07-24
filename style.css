@@ -73,10 +73,20 @@ header{
     border-radius: 5px;
     margin-right: 40px;
     cursor: pointer;
+    transition: 0.8s;
 }
 
-a button {
+.btn{
     color: blue;
+}
+.btn:hover{
+    color: #8F0F7A;
+}
+
+
+
+
+a button {
     background-color: transparent;
     border: none;
     margin-top: 0px;
@@ -1467,3 +1477,19 @@ header{}
     margin-left: 38px;
 }
 }
+
+
+#preloader {
+    background-color: #000;
+    background-image: url('/images/excited-loading.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+
+
+
+
